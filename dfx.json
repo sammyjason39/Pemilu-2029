@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Pemilu2029_backend": {
+      "main": "src/Pemilu2029_backend/main.mo",
+      "type": "motoko"
+    },
+    "Pemilu2029_frontend": {
+      "dependencies": [
+        "Pemilu2029_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Pemilu2029_frontend/src/index.html"
+      },
+      "source": [
+        "src/Pemilu2029_frontend/assets",
+        "dist/Pemilu2029_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
