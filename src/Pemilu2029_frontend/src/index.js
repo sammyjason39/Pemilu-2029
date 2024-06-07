@@ -1,8 +1,10 @@
-import { Pemilu2029_backend } from "../../declarations/Pemilu2029_backend";
+import {
+  Pemilu2029_backend
+} from "../../declarations/Pemilu2029_backend";
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const button = e.target.querySelector("button");
+  const button1 = e.target.querySelector("button");
 
   const name = document.getElementById("name").value.toString();
 
@@ -16,4 +18,17 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   document.getElementById("greeting").innerText = greeting;
 
   return false;
+
+  let votesCandidate1 = 0;
+  let votesCandidate2 = 0;
+
+  function vote(candidate) {
+    if (candidate === 'candidate1') {
+      votesCandidate1++;
+      document.getElementById('votes-candidate1').innerText = votesCandidate1;
+    } else if (candidate === 'candidate2') {
+      votesCandidate2++;
+      document.getElementById('votes-candidate2').innerText = votesCandidate2;
+    }
+  }
 });

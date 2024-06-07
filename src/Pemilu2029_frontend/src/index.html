@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,17 +9,29 @@
     <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
+
   <body>
     <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <div class="container">
+        <h1>Pemilu Konoha 2029</h1>
+        <h2>The big election in Konoha History, vote as much as you can, this is DEMOCRAZY</h2>
+
+        <form class="vote-form" action="#">
+          <div class="candidate">
+            <p>PEPE</p>
+            <img src="Candidate1.jpg" alt="Candidate 1">
+            <p>Total Votes: <span id="votes-candidate1">0</span></p>
+            <button type="button" onclick="vote('candidate1')">Vote</button>
+          </div>
+          <div class="candidate">
+            <p>DOGE</p>
+            <img src="Candidate2.jpg" alt="Candidate 2">
+            <p>Total Votes: <span id="votes-candidate2">0</span></p>
+            <button type="button" onclick="vote('candidate2')">Vote</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
+
 </html>
